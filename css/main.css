@@ -1,0 +1,663 @@
+ /* ==========================================================================
+
+    Erwan Lent
+   
+    Created: 01/01/2014
+    Website: http://erwanlent.com/
+    Bitbucket: https://bitbucket.org/elent
+    Email: erwanlent@gmail.com
+    Description: A creative landing page for erwanlent.com
+   ========================================================================== */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'cats_meowregular';
+    src: url('/../fonts/cat-webfont.eot');
+    src: url('/../fonts/cat-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/../fonts/cat-webfont.woff') format('woff'),
+         url('/../fonts/cat-webfont.ttf') format('truetype'),
+         url('/../fonts/cat-webfont.svg#cats_meowregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cat-chyregular';
+    src: url('/../fonts/cat-chy-webfont.eot');
+    src: url('/../fonts/cat-chy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/../fonts/cat-chy-webfont.woff') format('woff'),
+         url('/../fonts/cat-chy-webfont.ttf') format('truetype'),
+         url('/../fonts/cat-chy-webfont.svg#cat-chyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('/../fonts/icomoon.eot');
+  src:url('/../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('/../fonts/icomoon.svg#icomoon') format('svg'),
+    url('/../fonts/icomoon.woff') format('woff'),
+    url('/../fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google-plus:before {
+  content: "\e603";
+}
+.icon-github:before {
+  content: "\e604";
+}
+.icon-github2:before {
+  content: "\e605";
+}
+.icon-linkedin:before {
+  content: "\e606";
+}
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("/../fonts/flaticon.eot");
+    src: url("/../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+    url("/../fonts/flaticon.svg") format("svg"),
+    url("/../fonts/flaticon.woff") format("woff"),
+    url("/../fonts/flaticon.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+        font-size: 60px;
+font-style: normal;
+}.flaticon-bitbucket:before {
+    content: "\e000";
+}
+.flaticon-camera47:before {
+    content: "\e001";
+}
+.flaticon-code11:before {
+    content: "\e002";
+}
+.flaticon-fish8:before {
+    content: "\e003";
+}
+.flaticon-fish9:before {
+    content: "\e004";
+}
+.flaticon-fried:before {
+    content: "\e005";
+}
+
+
+/* ==========================================================================
+   Custom Style
+   ========================================================================== */
+
+html
+{
+    background-color: #ecf0f1; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+footer
+{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #ecf0f1;
+    background-color: black;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .developer a
+{
+  font-size: 20px;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 10px 0 0;
+}
+
+footer .developer a:hover
+{
+  color: #3498db;
+}
+
+section
+{
+    word-wrap: break-word;
+    color: #2c3e50;
+    overflow: hidden;
+    min-height: 740px;
+}
+
+section h1
+{
+    font-family: 'cats_meowregular';
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    margin: auto;
+    color: black;
+}
+
+.cat-bed
+{
+    -webkit-animation:move 4s linear normal; 
+    -moz-animation:move 5s;
+    -ms-animation:move 5s;
+    -o-animation:move 5s;
+    animation:move 5s;
+}
+
+.lazy-cat
+{
+    height: 200px;
+    width: 400px;
+    margin: 50px auto 0;
+}
+
+.message
+{
+    max-width: 960px;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.message-container
+{
+    width: 100%;
+    margin-bottom: 65px;
+}
+
+.name
+{
+    text-align: center;
+}
+
+.walking
+{
+  -webkit-animation:walk 1s steps(12) infinite;
+  -moz-animation:walk 1s steps(12) infinite;
+  -ms-animation:walk 1s steps(12) infinite;
+  -o-animation:walk 1s steps(12) infinite;
+  animation:walk 1s steps(12) infinite;
+  background: url(/../images/cat.png) 0 0 no-repeat; 
+}
+
+.sitting
+{
+    -webkit-animation:sit 1s steps(6);
+    -moz-animation:sit 1s steps(6);
+    -ms-animation:sit 1s steps(6);
+    -o-animation:sit 1s steps(6);
+    animation:sit 1s steps(6);
+    background: url(/../images/cat.png) -400px -996px no-repeat; 
+}
+
+.oval-thought 
+{
+    position: relative;
+    width: 156px;
+    padding: 12px 21px;
+    margin: 1em auto 0;
+    text-align: center;
+    color: #fff;
+    background:#34495e;
+    cursor: pointer;
+    -webkit-border-top-left-radius:220px 120px;
+    -webkit-border-top-right-radius:220px 120px;
+    -webkit-border-bottom-right-radius:220px 120px;
+    -webkit-border-bottom-left-radius:220px 120px;
+    -moz-border-radius:220px / 120px;
+    border-radius:220px / 120px;
+}
+
+.oval-thought:before 
+{
+    content:"";
+    position:absolute;
+    bottom:-30px;
+    left:50px;
+    width:30px;
+    height:30px;
+    background-color: inherit;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    border-radius:30px;
+}
+
+.oval-thought:after 
+{
+    content:"";
+    position:absolute;
+    bottom:-40px;
+    left:30px;
+    width:15px;
+    height:15px;
+    background-color: inherit;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+}
+
+.oval-thought:hover
+{
+    background: black;
+}
+
+.thought-bubble
+{
+    text-decoration: none;
+}
+
+@keyframes move
+{  
+    from {margin-left: 100%; } 
+    to {margin-left: 0; }
+}
+
+@-moz-keyframes move 
+{
+    from {margin-left: 100%; } 
+    to {margin-left: 0; }
+}
+
+@-ms-keyframes move
+{
+    from {margin-left: 100%; } 
+    to {margin-left: 0; }
+}
+
+@-o-keyframes move
+{
+    from {margin-left: 100%; } 
+    to {margin-left: 0; }
+}   
+
+@-webkit-keyframes move 
+{
+    from { margin-left: 100%; }
+    to { margin-left: 0; }
+}
+
+@keyframes walk
+{  
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}
+
+@-moz-keyframes walk 
+{
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}
+
+@-ms-keyframes walk
+{
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}
+
+@-o-keyframes  walk
+{
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}   
+
+@-webkit-keyframes walk 
+{
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}
+
+@keyframes sit
+{  
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}
+
+@-moz-keyframes sit 
+{
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}
+
+@-ms-keyframes sit
+{
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+}
+
+@-o-keyframes sit
+{
+    from {background-position: 0 0; } 
+    to {background-position: 0 -2391px; }
+} 
+
+@-webkit-keyframes sit 
+{
+    from {background-position: -400px 0; } 
+    to {background-position: -400px -1196px; }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
